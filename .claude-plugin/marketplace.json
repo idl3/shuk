@@ -9,7 +9,7 @@
       "name": "dk",
       "source": {
         "source": "url",
-        "url": "https://github.com/idl3/diakon.git"
+        "url": "git@github.com:idl3/diakon.git"
       },
       "version": "0.1.4",
       "description": "Multi-project workspace orchestration — manage projects, git operations, and encrypted secrets across a unified workspace.",
@@ -26,7 +26,7 @@
       "name": "olam",
       "source": {
         "source": "url",
-        "url": "https://github.com/idl3/olam.git"
+        "url": "git@github.com:idl3/olam.git"
       },
       "version": "0.1.0",
       "description": "Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri.",
