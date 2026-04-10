@@ -1,9 +1,12 @@
 ---
-title: Shuk Changelog
-summary: Chronological record of significant marketplace changes
+title: Shuk Wiki Log
+summary: Append-only log of all wiki operations
 updated: 2026-04-10
+confidence: log
+sources: []
 ---
 
-# Changelog
+# Wiki Log
 
-<!-- Newest entries at the top. Format: YYYY-MM-DD — description -->
+## [2026-04-10] init | Wiki initialized
+Scaffolded wiki with Karpathy three-layer architecture. Ready for first source ingest.

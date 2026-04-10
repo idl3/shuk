@@ -1,17 +1,13 @@
 ---
-title: Shuk Marketplace Wiki
-summary: Knowledge base for the Claude Code plugin marketplace
+title: Shuk Wiki Index
+summary: Master catalog of all wiki pages for Shuk
 updated: 2026-04-10
+confidence: seed
+sources: []
 ---
 
-# Shuk Marketplace Wiki
+# Shuk Wiki Index
 
-Agent-maintained knowledge base for the Shuk plugin marketplace. Read this file first to navigate the wiki.
-
-## Overview
-
-- [overview.md](overview.md) — What Shuk is, how plugins are discovered and installed, the manifest format
-
-## Log
-
-- [log.md](log.md) — Chronological record of significant changes
+| # | Article | Summary | Updated | Sources |
+|---|---------|---------|---------|---------|
+| 1 | [Overview](overview.md) | Claude Code plugin marketplace — git-based distribution for Diakon and Olam | 2026-04-10 | 0 |

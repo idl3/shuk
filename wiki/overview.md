@@ -1,89 +1,55 @@
 ---
 title: Shuk Overview
-summary: What Shuk is and how it works
+summary: Claude Code plugin marketplace — git-based distribution for Diakon and Olam
 updated: 2026-04-10
+confidence: seed
+sources:
+  - ../README.md
+  - ../.claude-plugin/marketplace.json
 ---
 
-# Shuk Overview
+# Shuk
 
-Shuk (Hebrew: *shuk*, market) is a Claude Code plugin marketplace maintained by idl3. It provides a registry where plugins can be discovered, installed, and versioned through the Claude Code plugin system.
+*The open market.*
 
-The name comes from the Hebrew word for an open-air market -- a bustling place where vendors offer their wares and buyers browse freely. In the same spirit, Shuk is where Claude Code plugins are offered and discovered.
+Shuk is a Claude Code plugin marketplace by idl3. The name comes from the Hebrew *shuk* — an open-air market where vendors offer their wares and buyers browse freely. Shuk is where Claude Code plugins are discovered and distributed.
 
 ## How It Works
 
-### Discovery
-
-Plugins are listed in the marketplace registry. Users add the marketplace as a source, then browse or install available plugins by name.
+Shuk distributes plugins via git repos. A marketplace manifest (`.claude-plugin/marketplace.json`) declares available plugins with their source URLs, versions, descriptions, and metadata. Users add the marketplace and install plugins by name.
 
 ```bash
 /plugin marketplace add idl3/shuk
+/plugin install dk@shuk      # workspace orchestration
+/plugin install olam@shuk    # world engine
 ```
 
-### Installation
+## Available Plugins
 
-Plugins are installed from the marketplace by name with an `@shuk` scope qualifier:
+| Plugin | Version | Description | Repository |
+|--------|---------|-------------|------------|
+| **dk** (Diakon) | 0.2.0 | Multi-project workspace orchestration — manage projects, git operations, encrypted secrets, and LLM wikis (Karpathy pattern) across a unified workspace | [idl3/diakon](https://github.com/idl3/diakon) |
+| **olam** | 0.1.0 | Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri | [idl3/olam](https://github.com/idl3/olam) |
 
-```bash
-/plugin install dk@shuk
-```
+## Marketplace Manifest
 
-The plugin system resolves the source URL from the marketplace manifest, clones the repository, and registers the plugin's skills and commands locally.
+The `marketplace.json` lives at `.claude-plugin/marketplace.json` and contains:
 
-### Versioning
+- **name** — marketplace identifier (`shuk`)
+- **owner** — author name and GitHub URL
+- **plugins[]** — array of plugin entries, each with:
+  - `name` — short install name (e.g. `dk`, `olam`)
+  - `source.url` — git SSH URL for cloning
+  - `version` — semver
+  - `description` — one-line summary
+  - `author`, `homepage`, `repository` — metadata
+  - `license` — licensing terms
+  - `keywords` — discoverability tags
 
-Each plugin entry in the manifest includes a `version` field (semver). The marketplace tracks the current published version. Updates are picked up when the marketplace registry is refreshed.
+## Architecture
 
-## The marketplace.json Manifest
+Shuk is minimal by design. No registry server, no package manager, no build pipeline. Distribution is git clone. The marketplace manifest is the only required file. Plugins are self-contained repos with their own `.claude-plugin/plugin.json`.
 
-The manifest lives at `.claude-plugin/marketplace.json` and defines the marketplace metadata and its plugin catalog.
+## License
 
-### Structure
-
-```json
-{
-  "name": "shuk",
-  "owner": {
-    "name": "Owner Name",
-    "url": "https://github.com/owner"
-  },
-  "plugins": [
-    {
-      "name": "plugin-short-name",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/owner/repo.git"
-      },
-      "version": "0.1.0",
-      "description": "What the plugin does.",
-      "author": { "name": "Author", "url": "https://github.com/author" },
-      "homepage": "https://github.com/owner/repo",
-      "repository": "https://github.com/owner/repo",
-      "license": "SPDX-ID",
-      "keywords": ["relevant", "tags"]
-    }
-  ]
-}
-```
-
-### Plugin Fields
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| `name` | yes | Short identifier used in install commands |
-| `source.url` | yes | Git URL to clone |
-| `version` | yes | Current semver version |
-| `description` | yes | One-line summary |
-| `author` | yes | Name and URL of the plugin author |
-| `homepage` | no | Landing page URL |
-| `repository` | no | Source repository URL |
-| `license` | no | SPDX license identifier |
-| `keywords` | no | Tags for discovery |
-
-## Current Plugins
-
-| Plugin | Version | Description |
-|--------|---------|-------------|
-| **diakon** (`dk`) | 0.1.4 | Multi-project workspace orchestration -- manage projects, git operations, and encrypted secrets across a unified workspace |
-
-Diakon is the first and currently only plugin hosted on Shuk.
+CC BY-NC 4.0 — free to use and adapt, not for commercial use.
