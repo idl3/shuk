@@ -28,7 +28,7 @@
         "source": "url",
         "url": "git@github.com:idl3/olam.git"
       },
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri.",
       "author": {
         "name": "Ernie Sim",
