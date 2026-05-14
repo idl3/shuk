@@ -29,7 +29,7 @@ Shuk distributes plugins via git repos. A marketplace manifest (`.claude-plugin/
 | Plugin | Version | Description | Repository |
 |--------|---------|-------------|------------|
 | **dk** (Diakon) | 0.2.0 | Multi-project workspace orchestration — manage projects, git operations, encrypted secrets, and LLM wikis (Karpathy pattern) across a unified workspace | [idl3/diakon](https://github.com/idl3/diakon) |
-| **olam** | 0.1.0 | Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri | [idl3/olam](https://github.com/idl3/olam) |
+| **olam** | 0.2.0 | Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri | [idl3/olam](https://github.com/idl3/olam) |
 
 ## Marketplace Manifest
 
