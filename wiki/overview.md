@@ -12,14 +12,14 @@ sources:
 
 *The open market.*
 
-Shuk is a Claude Code plugin marketplace by idl3. The name comes from the Hebrew *shuk* — an open-air market where vendors offer their wares and buyers browse freely. Shuk is where Claude Code plugins are discovered and distributed.
+Shuk is a Claude Code plugin marketplace by pleri. The name comes from the Hebrew *shuk* — an open-air market where vendors offer their wares and buyers browse freely. Shuk is where Claude Code plugins are discovered and distributed.
 
 ## How It Works
 
 Shuk distributes plugins via git repos. A marketplace manifest (`.claude-plugin/marketplace.json`) declares available plugins with their source URLs, versions, descriptions, and metadata. Users add the marketplace and install plugins by name.
 
 ```bash
-/plugin marketplace add idl3/shuk
+/plugin marketplace add pleri/shuk
 /plugin install dk@shuk      # workspace orchestration
 /plugin install olam@shuk    # world engine
 ```
@@ -28,8 +28,8 @@ Shuk distributes plugins via git repos. A marketplace manifest (`.claude-plugin/
 
 | Plugin | Version | Description | Repository |
 |--------|---------|-------------|------------|
-| **dk** (Diakon) | 0.2.0 | Multi-project workspace orchestration — manage projects, git operations, encrypted secrets, and LLM wikis (Karpathy pattern) across a unified workspace | [idl3/diakon](https://github.com/idl3/diakon) |
-| **olam** | 0.2.0 | Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri | [idl3/olam](https://github.com/idl3/olam) |
+| **dk** (Diakon) | 0.2.0 | Multi-project workspace orchestration — manage projects, git operations, encrypted secrets, and LLM wikis (Karpathy pattern) across a unified workspace | [pleri/diakon](https://github.com/pleri/diakon) |
+| **olam** | 0.3.0 | Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri | [pleri/olam-cli](https://github.com/pleri/olam-cli) |
 
 ## Marketplace Manifest
 
