@@ -26,16 +26,16 @@
       "name": "olam",
       "source": {
         "source": "url",
-        "url": "git@github.com:idl3/olam.git"
+        "url": "git@github.com:pleri/olam-cli.git"
       },
-      "version": "0.2.0",
+      "version": "0.3.0",
       "description": "Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri.",
       "author": {
         "name": "Ernie Sim",
         "url": "https://github.com/idl3"
       },
-      "homepage": "https://github.com/idl3/olam",
-      "repository": "https://github.com/idl3/olam",
+      "homepage": "https://github.com/pleri/olam-cli",
+      "repository": "https://github.com/pleri/olam-cli",
       "license": "CC-BY-NC-4.0",
       "keywords": ["worlds", "agents", "thought-graphs", "isolation", "mise", "docker", "mcp"]
     }
