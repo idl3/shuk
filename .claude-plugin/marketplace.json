@@ -2,23 +2,23 @@
   "name": "shuk",
   "owner": {
     "name": "Ernie Sim",
-    "url": "https://github.com/idl3"
+    "url": "https://github.com/pleri"
   },
   "plugins": [
     {
       "name": "dk",
       "source": {
         "source": "url",
-        "url": "git@github.com:idl3/diakon.git"
+        "url": "git@github.com:pleri/diakon.git"
       },
       "version": "0.2.0",
       "description": "Multi-project workspace orchestration — manage projects, git operations, encrypted secrets, and LLM wikis (Karpathy pattern) across a unified workspace.",
       "author": {
         "name": "Ernie Sim",
-        "url": "https://github.com/idl3"
+        "url": "https://github.com/pleri"
       },
-      "homepage": "https://github.com/idl3/diakon",
-      "repository": "https://github.com/idl3/diakon",
+      "homepage": "https://github.com/pleri/diakon",
+      "repository": "https://github.com/pleri/diakon",
       "license": "CC-BY-NC-4.0",
       "keywords": ["workspace", "multi-repo", "orchestration", "monorepo", "secrets", "sops", "age"]
     },
@@ -32,7 +32,7 @@
       "description": "Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri.",
       "author": {
         "name": "Ernie Sim",
-        "url": "https://github.com/idl3"
+        "url": "https://github.com/pleri"
       },
       "homepage": "https://github.com/pleri/olam-cli",
       "repository": "https://github.com/pleri/olam-cli",
