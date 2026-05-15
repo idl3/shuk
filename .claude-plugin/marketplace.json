@@ -25,9 +25,8 @@
     {
       "name": "olam",
       "source": {
-        "source": "git-subdir",
-        "url": "git@github.com:pleri/olam-cli.git",
-        "path": "plugin"
+        "source": "url",
+        "url": "git@github.com:pleri/olam-cli.git"
       },
       "version": "0.3.0",
       "description": "Agentic thinking platform — spawn isolated development worlds with thought graph capture, multi-runtime stack support, and team-level intelligence via Pleri.",
